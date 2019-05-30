@@ -1,0 +1,22 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+ name: hello-app-ingress
+ namespace: bliuchak
+ annotations:
+   kubernetes.io/ingress.class: nginx
+   nginx.ingress.kubernetes.io/rewrite-target: /$2
+spec:
+ rules:
+ - host: services.k8s.community
+   http:
+     paths:
+     - path: /bliuchak/hi(/|$)(.*)
+       backend:
+         serviceName: hello-app
+         servicePort: 8080
+ tls:
+ - hosts:
+   - services.k8s.community
+   secretName: tls-secret
+
