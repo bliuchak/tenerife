@@ -1,4 +1,4 @@
-module github.com/ibliuchak/tenerife
+module github.com/bliuchak/tenerife
 
 go 1.12
 

@@ -2,8 +2,8 @@ package main
 
 import (
 	"context"
-	"github.com/ibliuchak/tenerife/internal/application"
-	"github.com/ibliuchak/tenerife/internal/diagnostics"
+	"github.com/bliuchak/tenerife/internal/application"
+	"github.com/bliuchak/tenerife/internal/diagnostics"
 	"net"
 	"net/http"
 	"os"
